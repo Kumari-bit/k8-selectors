@@ -5,17 +5,17 @@ metadata:
 spec:
   affinity:
     nodeAffinity:
-       requiredDuringSchedulingIgnoredDuringExecution:
-         nodeSelectorTerms:
-         - matchExpressions:
-           - key: hardware
-             operator: In
-             values:
-              - gpu
-              - gpuuu
-       preferredDuringSchedulingIgnoredDuringExecution:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchExpressions:
+          - key: hardware
+            operator: In
+            values:
+            - gpu
+            - gpuuu
+      preferredDuringSchedulingIgnoredDuringExecution:
       - weight: 1
-         preference:
+        preference:
           matchExpressions:
           - key: another-node-label-key
             operator: In
